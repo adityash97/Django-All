@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Demo from model form(login)</h1>
+    <h3>Form is being created by using Model.</h3>
+    <h3>Same model which is being used to store data in data base.</h3>
+
+    <form action="" method="POST" novalidate>
+        <table>
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value = "Submit">
+        </table>
+    </form>
+    <a href="{% url 'model-signup'%}">signup</a>
+</body>
+</html>
